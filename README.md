@@ -60,5 +60,15 @@ with your feed url.
 
 
 
-STEP 4: SAVE, UPLOAD.
+STEP 4: SAVE, UPLOAD, INCLUDE IN YOUR WORDPRESS THEME
+Save it in your theme folder.
+
+In the functions.php file, include the file.
+Ex. include 'mailchimp-newsletters.php';
+
+
+STEP 5:  ADD THE LIST TO THE PAGE
+To display the list, include the shortcode ' [mc_newsletter_list] ' on a page.
+
+
 That should do it!
