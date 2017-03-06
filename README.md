@@ -1,7 +1,5 @@
 # wp-mailchimp-display_newsletters
 
-Code display
-
 Mailchimp newsletter campaigns are also available as RSS feeds.  It's an obscure feature, but a handy one.
 This code will pull the RSS feed in, parse it, then display the results on the screen.
 Each newsletter appears with the date, title, excerpt.  The user can click a button to read the entire newsletter.
@@ -29,3 +27,38 @@ Scroll down to near the bottom and select 'Campaign archive page'
 
 For more on finding this link, <br>
 see also: See:  http://kb.mailchimp.com/campaigns/archives/find-your-sent-email-campaigns
+
+
+
+
+SETP 2:  CHANGE THE ARCHIVE URL TO DISPLAY THE RSS FEED FOR THE CAMPAIGN
+
+The 'Campaign archive page' gives you a link to your archive page.  It displays all the newsletters, but in HTML format.  We need to change the url to display the rss feed.
+
+To do that, replace 'home' with 'feed' in the URL.
+
+Ex.
+From:
+http://us4.campaign-archive2.com/home/?u=xxxxxxxxx&id=yyyyyyyyyy
+
+To
+http://us4.campaign-archive2.com/feed/?u=xxxxxxxxx&id=yyyyyyyyyy
+
+
+
+
+SETP 3:  PUT THE RSS URL INTO THE CODE.
+
+1) Open up the file 'mailchimp-newsletters.php'
+
+2) Around line 7, you will see:
+	//===== GET MAILCHIMP FILE =====//	
+	$File = 'http://us4.campaign-archive2.com/feed/?u=xxxxxxxxx&id=yyyyyyyyyy';
+
+3) Replace 'http://us4.campaign-archive2.com/feed/?u=xxxxxxxxx&id=yyyyyyyyyy'
+with your feed url.
+
+
+
+STEP 4: SAVE, UPLOAD.
+That should do it!
